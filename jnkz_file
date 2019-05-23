@@ -1,1 +1,23 @@
 checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'github-jenkins-ssh-key', url: 'git@github.com:amlas2017/jenkins-docker.git']]])
+
+
+node('master') {
+    // some block
+}
+
+
+stage('scm') {
+    // some block
+}
+
+stage('build') {
+    // some block
+}
+
+withMaven(jdk: 'default Java', maven: 'Default Maven') {
+    // some block
+}
+
+sh label: '', script: 'mvn clean install'
+
+
