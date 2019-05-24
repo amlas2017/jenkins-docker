@@ -1,8 +1,16 @@
-node(docker) {
-checkout scm
-stage('build') {
-    withMaven(jdk: 'Default Java', maven: 'Default Maven') {
-    sh 'mvn clean install'
-}
+pipeline {
+agent any
+    stages{
+        stage('Build'){
+            steps{
+                'sh /usr/share/maven/bin clean install'
+                }
+        }
+        stage('Test'){
+            steps{
+                'sh /usr/share/maven/bin test'
+                }
+        }
+        
 }
 }
