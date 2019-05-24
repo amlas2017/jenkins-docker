@@ -11,6 +11,5 @@ stages{
       sh '/usr/share/maven/bin/mvn test'
            }
         }
-        
-}
+    }
 }
