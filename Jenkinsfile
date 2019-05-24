@@ -3,12 +3,12 @@ agent any
 stages{
    stage('Build'){
      steps{
-     sh '/usr/share/maven/bin clean install'
+     sh '/usr/share/maven/bin/mvn clean install'
            }
         }
     stage('Test'){
       steps{
-      sh '/usr/share/maven/bin test'
+      sh '/usr/share/maven/bin/mvn test'
            }
         }
         
